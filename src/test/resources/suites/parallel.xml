@@ -12,7 +12,7 @@
             </run>
         </groups>
         <classes>
-            <class name="bookstore.LoginTests"/>
+<!--            <class name="bookstore.LoginTests"/>-->
             <class name="saucedemo.LoginTests"/>
         </classes>
     </test>

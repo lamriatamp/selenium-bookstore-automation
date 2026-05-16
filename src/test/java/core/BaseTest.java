@@ -19,7 +19,7 @@ public class BaseTest {
     @BeforeSuite(alwaysRun = true)
     public void loadConfig() {
         String env = System.getProperty("env");
-        env = (env == null || env.isEmpty()) ? "production" : env;
+        env = (env == null || env.isEmpty()) ? "staging" : env;
         config = ConfigReader.loadProperties(env);
     }
 

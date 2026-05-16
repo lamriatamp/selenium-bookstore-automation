@@ -32,9 +32,8 @@ public class LoginTests extends BaseTest {
 
 
         logger.info("Verify user sukses redirected ke halaman inventory");
-        Assert.assertTrue(loginPage.getCurrentUrl().contains("inventory"),
+        Assert.assertTrue(loginPage.isUrlContains("inventory"),
                 "User should be redirected to the inventory page after successful login");
-
 
         logger.info("Verify tidak ada error message yang ditampilkan setelah login sukses");
         Assert.assertFalse(loginPage.isErrorMessageDisplayed(),
@@ -43,7 +42,7 @@ public class LoginTests extends BaseTest {
     }
 
 
-    @DataProvider(name = "loginCredentials", parallel = true)
+    @DataProvider(name = "loginCredentials") // Dihapus agar default berjalan berurutan (sekuensial)
     public Object[][] loginCredentials() {
         return TestUtils.getTestData("src/test/resources/data/login-data-test.xlsx", "login-tests");
     }
