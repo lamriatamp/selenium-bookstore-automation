@@ -1,1 +1,1 @@
-rootProject.name = "AutomationBookstore"
+rootProject.name = "batch-4-qa"
